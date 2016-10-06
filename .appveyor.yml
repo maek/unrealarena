@@ -23,9 +23,6 @@ clone_depth: 50
 # Build matrix configuration
 environment:
   matrix:
-    - PLATFORM: x86
-      OS: win32
-      TARGET: x86
     - PLATFORM: x64
       OS: win64
       TARGET: x86_amd64
@@ -74,17 +71,3 @@ test: off
 # Artifacts uploading
 artifacts:
   - path: $(ARTIFACT)
-
-
-#---------------------------------#
-#     Deployment Configuration    #
-#---------------------------------#
-
-# Deploy configuration
-deploy:
-  provider: GitHub
-  auth_token:
-    secure: spoBwMP9bEms2fq9bzANE/+Fj39lA85K0clAv9sx7yTHT+WR7sfdCSChynbMOHQP
-  draft: true
-  on:
-    appveyor_repo_tag: true

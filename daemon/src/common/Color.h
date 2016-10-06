@@ -145,7 +145,9 @@ public:
 	static CONSTEXPR bool is_color = true;
 	using color_traits = Traits;
 	using component_type = typename color_traits::component_type;
-	static CONSTEXPR auto component_max = color_traits::component_max;
+	static CONSTEXPR decltype(component_type) component_max = color_traits::component_max;
+
+
 
 	// Returns the value of an indexed color
 	static BasicColor Indexed( int i )

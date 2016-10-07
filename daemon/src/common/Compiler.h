@@ -85,7 +85,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define NOEXCEPT_EXPR(x) noexcept(x)
 
 // Work around lack of constexpr
-#define CONSTEXPR constexpr
+#define CONSTEXPR const
 
 // To mark functions which cause issues with address sanitizer
 #if __clang__

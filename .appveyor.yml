@@ -29,7 +29,7 @@ environment:
 
 # Environment configuration
 install:
-  - call "%VS150COMNTOOLS%\..\..\VC\vcvarsall.bat" %TARGET%
+  - call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" %TARGET%
 
 
 #---------------------------------#

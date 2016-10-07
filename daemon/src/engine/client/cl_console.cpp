@@ -511,7 +511,7 @@ bool CL_InternalConsolePrint( const char *text )
 				}
 				else if ( wordtoken.Type() == Color::Token::CHARACTER )
 				{
-					if ( std::isspace( *wordtoken.Begin() ) )
+					if ( isspace( *wordtoken.Begin() ) )
 					{
 						break;
 					}

@@ -46,7 +46,7 @@ before_build:
 # Build configuration
 build_script:
   - copy "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\redist\%PLATFORM%\Microsoft.VC140.CRT\*"
-  - copy "C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\%PLATFORM%\*"
+  - copy "C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\%PLATFORM%\*"
   - dir /s
 
 

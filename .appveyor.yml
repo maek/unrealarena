@@ -45,7 +45,7 @@ before_build:
 
 # Build configuration
 build_script:
-  - dir "C:\Program Files (x86)\Windows Kits\10\Redist\ucrt"
+  - dir /s "C:\Program Files (x86)\Windows Kits\10\Redist\ucrt"
 
 
 #---------------------------------#

@@ -45,15 +45,10 @@ before_build:
 
 # Build configuration
 build_script:
-  - mkdir build
-  - cd build
-  - cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DBUILD_SERVER=0 -DBUILD_GAME_NATIVE_EXE=0 -DBUILD_GAME_NATIVE_DLL=0 -DBUILD_GAME_NACL=0 -DBUILD_TTY_CLIENT=0 ..
-  - cmake --build .
-
-# Scripts called after build
-after_build:
-  - copy "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\redist\%PLATFORM%\Microsoft.VC140.CRT\*.dll"
-  - 7z a %APPVEYOR_BUILD_FOLDER%\%ARTIFACT% daemon.exe glew32.dll irt_core*.nexe libcurl-4.dll libfreetype-6.dll libGeoIP-1.dll libgmp-10.dll libhogweed-4-1.dll libjpeg-8.dll libnettle-6-1.dll libogg-0.dll libopus-0.dll libopusfile-0.dll libpng16-16.dll libtheora-0.dll libvorbis-0.dll libvorbisfile-3.dll libwebp-5.dll lua53.dll msvcp140.dll  concrt140.dll vccorlib140.dll vcruntime140.dll  nacl_loader*.exe OpenAL32.dll SDL2.dll zlib1.dll
+  - dir "C:\Program Files (x86)"
+  - dir "C:\Program Files (x86)\Windows Kits"
+  - dir "C:\Program Files (x86)\Windows Kits\10"
+  - dir "C:\Program Files (x86)\Windows Kits\10\Redist"
 
 
 #---------------------------------#
@@ -62,12 +57,3 @@ after_build:
 
 # Disable automatic tests
 test: off
-
-
-#---------------------------------#
-#      Artifacts Configuration    #
-#---------------------------------#
-
-# Artifacts uploading
-artifacts:
-  - path: $(ARTIFACT)

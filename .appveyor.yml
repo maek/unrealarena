@@ -55,7 +55,7 @@ build_script:
 
 # Scripts called after build
 after_build:
-  - dir /s "C:\Program Files (x86)\Microsoft Visual Studio\2017\VC\Redist"
+  - dir /s "C:\Program Files (x86)\Microsoft Visual Studio\2017\VC"
   # - copy "C:\Program Files (x86)\Microsoft Visual Studio\2017\VC\Redist\MSVC\...\%PLATFORM%\Microsoft.VC150.CRT\*"
   - copy "C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\%PLATFORM%\*"
   - 7z a %APPVEYOR_BUILD_FOLDER%\%ARTIFACT% *.dll *.exe *.nexe

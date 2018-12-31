@@ -45,7 +45,7 @@ before_build:
       (set ARTIFACT=unrealarena-%OS%.pre.zip)
     else
       (set ARTIFACT=artifacts.zip)
-  - dir /s "C:\Program Files (x86)\Microsoft Visual Studio\2017\VC"
+  - dir /s "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC"
 
 # Build configuration
 build_script:
